@@ -1,0 +1,9 @@
+ <% @books.each do |book|%>
+ <div class="book_shelf">
+     <div class="book_wrapper">
+       <h1><%= link_to book.title, book_show_path(id: book.id)%></h1>
+          <%= image_tag book.photo_url %>
+          <h3><%= number_to_currency(book.price) %></h3>
+        </div>
+   </div>
+ <%end%>
